@@ -1,0 +1,156 @@
+gui:
+  page_variables:
+    # defaults & structure to store state across pages
+    # REFLECT ANY CHANGES IN CODEBASE
+    global:
+      project_name: 'DEBUG'
+      project_version: '0'
+    files:
+      # files
+      utility_api_raw: null
+      baseline_load_profile_xlsx: null
+      # parameters
+      mdc_param_annualize: true
+      mdc_param_fix_low_values: false
+      mdc_param_fix_threshold: 0.15
+    aps:
+      # files
+
+      # parameters
+
+page_data:
+  0: 
+    key: root
+    label: About
+    title: About
+    description: 
+      Welcome to the Solar Microgrid Analysis Processor (SMAP), by the [Clean Coalition](http://www.clean-coalition.org).
+                    
+      Here you will find tools for the essential steps in sizing a solar microgrid for a home, site, or facility, based
+      on the Clean Coalition's experience and expertise.
+      
+      
+      Select a tool on the left to get started. 
+      
+      
+      Click [here](https://docs.google.com/document/d/1H25wgsGfH7WZTujXRMUwjaKbiP_NJqr8f8Thr6dHwJk/edit) to read documentation.
+      
+      
+      Questions? Suggestions? Contact bryan@clean-coalition.org
+    instructions: © Clean Coalition 2023
+  1:
+    key: mdc
+    label: Meter Data Cleaner
+    title: Time Series Data Cleaner
+    description: 
+      'The Meter Data Cleaner cleans load data. Specific steps include:
+            
+        1. Flagging duplicate and missing timestamps
+        
+        2. Flagging zero values (optional)
+            
+        3. Infering an ideal timestamp sequence
+            
+        4. Calculating filler values for flagged timestamps
+            
+        5. Merging the original data with the filler values to create a continuous series
+      '
+    instructions: Read more in the [SMAP Documentation](https://docs.google.com/document/d/1p0C7vOxsy5PIskhG0iMAlyUr5ydqbUgBuoaW3cA20VU/edit#heading=h.3tlze4etosut).
+  2: 
+    key: aps
+    label: Aggregated Profiles Spreadsheet
+    title: APS Page
+    description: '
+            The Aggregated Profiles Spreadsheet (APS) includes exactly 6 columns:
+
+            
+            Time Stamp, Baseline Load Profile, Adjustment Load Profile, Master Load Profile, Critical Load Profile, and Solar Generation Profile.
+            '
+    instructions: 'Create an Aggregated Profiles Spreadsheet by uploading the appropriate files in the sidebar to the left.
+            
+            Four inputs are required:
+            
+            * _The Timestamp column will be defined automatically as equally spaced 15-minute intervals for the year before right now._
+            
+            1. The **Baseline** Profile an *.xslx sheet with a 2-column [timestamp, value_kWh] structure in the first tab (subsequent tabs are ignored)
+            
+            2. The **Adjustment** profile can be defined by a a 2-column *.xlsx file, or left as "None"* _The Master profile will be the sum of the Baseline and Adjustment profiles at each timestep_
+    
+              
+            3. The **Critical** Load profile can be defined by a two-column spreadsheet, as a percentage of the Baseline load profile, or as a percentage of the Master load profile  
+            
+            4. Finally, the **Solar** Generation Profile can be defined by a Helioscope output CSV file or a two-column *.xlsx file'
+  3:
+    key: socr
+    label: SOCr Calculator
+    title: The State of Charge for Resilience (SOCr) calculator
+    description: The SOCr Calculator tool calculates the requires state of charge of a Battery Energy Storage System (BESS) at any given time interval to cover the Critical Loads in a solar microgrid, assuming no energy imports from outside the microgrid.
+    instructions: Create an SOCr profile by uploading Aggregrated Profiles Spreadsheet in the sidebar to the left.
+  4:
+    key: efd
+    label: Energy Flow Diagram
+    title: Energy Flow Diagram Generator
+    description: 'The Energy Flow Diagram describes how the load at a site is 
+            served from a combination of Solar, 
+            Battery Energy Storage Systems (BESS), and grid imports.'  
+    instructions: '
+            Create an Energy Flow Diagram (EFD) by uploading a 
+            Aggregated Profiles Spreadsheet (APS)
+            on the sidebar to the left.'
+  5:
+    key: ea
+    label: Economic Analysis
+    title: Economic Analysis Tool
+    description: The Economic Analysis system relies on external rate analysis, e.g. from Energy ToolBase
+    instructions: Upload an ETB file and explore the project's economics.
+st:
+  page_title: Solar Microgrid Analysis Processor
+  layout: wide
+smap:
+  default_project_name: DEBUG
+  
+styles:
+  cc_blue:    "#3c9dff"
+  font: "Georgia"
+
+  header_green: "#a9d08e"
+
+  white:      "#ffffff"
+  black:      "#000000"
+  label_gray: "#cccccc"
+  light_gray: "#f2f2f2"
+  dark_gray:  "#333333"
+
+  plot-colors-dark:
+    Baseline:   "#7CC1C1"
+    Adjustment: "#006600"
+    Master:     "#3366CC"
+    Critical:   "#EB3535"
+    Solar:      "#FBD966"
+    bess:       "#692D8E"
+    curtailed:  "#C15A14"
+    grid_export: "#F665FF"
+    grid_import: "#C15A14"
+    bess_to_load: "#9cc3e1"
+  
+  plot-colors-light: 
+    Baseline:   "#dbf1f1"
+    Adjustment: "#00b500"
+    Master:     "#5ab5f3"
+    Critical:   "#fa5e5e"
+    Solar:      "#f8f05a"
+    bess:       "#e58cef"
+    curtailed:  "#f19f23"
+    grid_import: "#f19f23"
+    bess_to_load: "#e8f1f8"
+    
+  excel-colors:
+      header_green: "#a9d08e"
+      header_light_blue: "#ddebf7"
+      header_pink: "#f2f2f2"
+      white:      "#ffffff"
+      black:      "#000000"
+      label_gray: "#cccccc"
+      light_gray: "#f2f2f2"
+      dark_gray:  "#333333"
+      
