@@ -18,7 +18,7 @@ class Tool(ABC):
     def __init__(self, smap_client) -> None:
         # SMAP_Client parent object, !!lazy import to prevent circular imports!!
         from smap_package.smap_client import SMAP_Client
-        assert isinstance(smap_client, SMAP_Client), "Parent must be an instance of SMAP. In ServiceTemplate init."
+        assert isinstance(smap_client, SMAP_Client), "Must initialize using an instance of SMAP_Client."
         self.smap_client = smap_client
 
     # Access shared project_name
