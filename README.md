@@ -4,6 +4,7 @@ This repository contains SMAP Version 2
 
 `smap_package/` directory contains the complete package env.
 
+To run: `streamlit run streamlit.py `
 
 ### Package directory structure:
 ```plain text
