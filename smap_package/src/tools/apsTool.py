@@ -3,7 +3,7 @@ import io
 import pandas as pd
 
 from smap_package.src.utils.Tool import Tool
-from smap_package.src.helpers.tools import apsHelpers
+from smap_package.src.helpers import apsHelpers
 from smap_package.src.plotting import apsPlotting
 
 class APS(Tool):

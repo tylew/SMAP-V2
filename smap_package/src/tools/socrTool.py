@@ -1,6 +1,6 @@
 
 from smap_package.src.utils.Tool import Tool
-from smap_package.src.helpers.tools import socrHelpers
+from smap_package.src.helpers import socrHelpers
 from smap_package.src.helpers import generalHelpers
 
 class SOCr(Tool):

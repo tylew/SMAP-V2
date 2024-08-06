@@ -4,6 +4,9 @@ from smap_package import CONFIG
 from smap_package.gui.streamlit.st_modules import PageState, page_header
 from smap_package.gui.streamlit.st_pages.st_mdc import st_mdc_gui
 from smap_package.gui.streamlit.st_pages.st_aps import st_aps_gui
+from smap_package.gui.streamlit.st_pages.st_socr import st_socr_gui
+from smap_package.gui.streamlit.st_pages.st_efd import st_efd_gui
+from smap_package.gui.streamlit.st_pages.st_ea import st_ea_gui
 
 from smap_package.smap_client import SMAP_Client
 
@@ -59,11 +62,11 @@ def render_page():
     elif index == 2:
         st_aps_gui()
     elif index == 3:
-        st.markdown(f'{index}')
+        st_socr_gui()
     elif index == 4:
-        st.markdown(f'{index}')
+        st_efd_gui()
     elif index == 5:
-        st.markdown(f'{index}')
+        st_ea_gui()
 
 
 def display_base_sidebar():

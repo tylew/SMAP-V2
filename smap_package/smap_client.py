@@ -4,6 +4,8 @@ import numpy as np
 from smap_package.src.tools.mdcTool import MDC
 from smap_package.src.tools.apsTool import APS
 from smap_package.src.tools.socrTool import SOCr
+from smap_package.src.tools.efdTool import EFD
+from smap_package.src.tools.eaTool import EA
 
 class SMAP_Client:
 
@@ -19,10 +21,10 @@ class SMAP_Client:
             self.aps = APS(self)
         if 'socr' in tools:
             self.socr = SOCr(self)
-        # if 'efd' in tools:
-        #     self.efd = EFD(self)
-        # if 'ea' in tools:
-        #     self.ea = EA(self)
+        if 'efd' in tools:
+            self.efd = EFD(self)
+        if 'ea' in tools:
+            self.ea = EA(self)
 
         # Output files
         self.baseline_load_profile = None # XLSX buffer obj. Set by MDC.run(). Consumed by APS

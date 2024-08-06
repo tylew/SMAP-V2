@@ -2,7 +2,7 @@ import io
 import pandas as pd
 import copy
 from smap_package.src.utils.Tool import Tool
-from smap_package.src.helpers.tools import mdcHelpers
+from smap_package.src.helpers import mdcHelpers
 
 class MDC(Tool):
     def __init__(self, smap_client) -> None:
