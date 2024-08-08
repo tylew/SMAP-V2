@@ -35,29 +35,15 @@ smap_package/
 │   ├── smap_client.py
 │   ├── config.yaml
 │   │   
-│   ├── tools/
-│   │   ├── mdcTool.py
-│   │   ├── apsTool.py
-│   │   ├── socrTool.py
-│   │   ├── efdTool.py
-│   │   ├── eaTool.py
-│   │   
-│   ├── plotting/
-│   │   ├── mdcPlotting.py
-│   │   ├── apsPlotting.py
-│   │   ├── socrPlotting.py
-│   │   ├── efdPlotting.py
-│   │   ├── eaPlotting.py
+│   ├── [ToolCode]/
+│   │   ├── [ToolCode]Tool.py
+│   │   ├── [ToolCode]Plotting.py
+│   │   ├── [ToolCode]Helpers.py
 │   │   
 │   ├── utils/
 │   │   ├── Tool.py
 │   │   ├── BESS.py
-│   │   
-│   ├── helpers/
 │   │   ├── generalHelpers.py
-│   │   ├── mdcHelpers.py
-│   │   ├── apsHelpers.py
-│   │   ├── socrHelpers.py
-│   │   ├── efdHelpers.py
-│   │   ├── eaHelpers.py
+│   │   ├── [SmapToolTemplate]/
+│   │   │   ├── [Template Files]
 ```
