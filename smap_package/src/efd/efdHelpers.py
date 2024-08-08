@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from smap_package.src.helpers.generalHelpers import df_from_file
+from smap_package.src.utils.generalHelpers import df_from_file
 
 from smap_package import CONFIG # imported from base/__init__.py
 

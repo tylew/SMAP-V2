@@ -1,11 +1,11 @@
 import pandas as pd
 import numpy as np
 
-from smap_package.src.tools.mdcTool import MDC
-from smap_package.src.tools.apsTool import APS
-from smap_package.src.tools.socrTool import SOCr
-from smap_package.src.tools.efdTool import EFD
-from smap_package.src.tools.eaTool import EA
+from smap_package.src.mdc.mdcTool import MDC
+from smap_package.src.aps.apsTool import APS
+from smap_package.src.socr.socrTool import SOCr
+from smap_package.src.efd.efdTool import EFD
+from smap_package.src.ea.eaTool import EA
 
 class SMAP_Client:
 

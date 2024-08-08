@@ -1,4 +1,4 @@
-from smap_package.src.helpers import generalHelpers
+from smap_package.src.utils import generalHelpers
 import io
 import pandas as pd
 import numpy as np

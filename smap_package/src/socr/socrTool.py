@@ -1,7 +1,7 @@
 
 from smap_package.src.utils.Tool import Tool
-from smap_package.src.helpers import socrHelpers
-from smap_package.src.helpers import generalHelpers
+from smap_package.src.socr import socrHelpers
+from smap_package.src.utils import generalHelpers
 
 class SOCr(Tool):
     def __init__(self, smap_client) -> None:
