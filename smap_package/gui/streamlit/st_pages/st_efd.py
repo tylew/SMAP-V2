@@ -1,6 +1,6 @@
 import streamlit as st
 from smap_package.src.utils.BESS import BESS
-from smap_package.src.plotting.efdPlotting import efd_load_shed_1d
+from smap_package.src.efd.efdPlotting import efd_load_shed_1d
 import uuid
 
 import io

@@ -1,6 +1,6 @@
 from smap_package.src.utils.BESS import BESS
 from smap_package.src.utils.Tool import Tool
-from smap_package.src.ea import run_ea
+from smap_package.src.ea.eaHelpers import run_ea
 
 class EA(Tool):
     def __init__(self, smap_client) -> None:
