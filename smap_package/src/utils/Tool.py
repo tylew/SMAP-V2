@@ -77,36 +77,5 @@ class Tool(ABC):
     
     @abstractmethod
     def reset(self, **kwargs):
-        """Method to reset service's data"""
+        """Method to reset service's data to defaults"""
         raise NotImplementedError("Subclasses must implement this method")
-
-    @abstractmethod
-    def reload_plots(self, **kwargs):
-        """
-        Method to reload service's plots
-        name, selections, etc.
-        """
-        raise NotImplementedError("Subclasses must implement this method")
-
-'''
-    # @override
-    def is_complete(self) -> bool:
-        pass
-    
-    # @override
-    def generate_data(self, **kwargs):
-        pass
-
-    # @override
-    def generate_plots(self, **kwargs):
-        pass
-    
-    # @override
-    def reset(self, **kwargs):
-        pass
-
-    # @override
-    def reload_plots(self, **kwargs):
-        pass
-
-'''

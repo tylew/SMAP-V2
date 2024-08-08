@@ -30,15 +30,3 @@ class SMAP_Client:
         self.baseline_load_profile = None # XLSX buffer obj. Set by MDC.run(). Consumed by APS
         self.aggregated_profile_spreadsheet = None #
         self.socr_spreadsheet = None
-
-    # def reload_plots(self, tools=['mdc', 'aps', 'socr', 'efd', 'ea']):
-    #     if 'mdc' in tools:
-    #         self.mdc.reload_plots()
-        # if 'aps' in tools:
-        #     self.aps.reload_plots()
-        # if 'socr' in tools:
-        #     self.socr.reload_plots()
-        # if 'efd' in tools:
-        #     self.efd.reload_plots()
-        # if 'ea' in tools:
-        #     self.ea.reload_plots()
